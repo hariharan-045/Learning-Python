@@ -87,7 +87,8 @@ def multipleargument(tup):
 tup=("1","2","3","4") 
 multipleargument(tup)
 
-'''
+#*args, **kwargs == kye word argument
+
 def argkwargs(*args, **kwargs):
 
     sum =[]
@@ -101,3 +102,20 @@ def argkwargs(*args, **kwargs):
     print(sum2)
 
 argkwargs(1,2,3,3, name = 2 , age = 12)
+'''
+
+#decorater 
+
+def login(fun):
+
+    def decorater():
+        print("start loading....")
+        fun()
+        print("end loading....")
+    return decorater
+@login
+def add(num1 ,num2):
+   num1 = input("enter1") 
+   num2 = input("enter2")
+   print(num1+num2)
+add()
