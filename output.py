@@ -44,6 +44,9 @@ print("my {} is {}".format('age',19))
 print("{0} + {1} = {2}".format(2, 3 ,2))
 
 
+name = "hari"
+print("hii"+name,"hii")
+
 ''' mock questions 
 nums = [0, 1, 2, 0, 3]
 print(sum(bool(x) for x in nums))

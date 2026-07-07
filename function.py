@@ -102,20 +102,47 @@ def argkwargs(*args, **kwargs):
     print(sum2)
 
 argkwargs(1,2,3,3, name = 2 , age = 12)
-'''
+
 
 #decorater 
 
 def login(fun):
 
-    def decorater():
+    def decorater(*args, **kwargs):
         print("start loading....")
-        fun()
+        fun(*args,**kwargs)
         print("end loading....")
+    
     return decorater
+
 @login
-def add(num1 ,num2):
-   num1 = input("enter1") 
-   num2 = input("enter2")
+def add(num1,num2):
    print(num1+num2)
-add()
+
+num1 = int(input("enter"))
+@login
+def sup(num1,num2):
+    print(num1 - num2)
+
+@login
+def dic(**details):
+    for key, value in details.items():
+        print(key,":", value)
+add(2,3)
+sup(num1,3)
+dic(name = "hari",age = 23)
+'''
+
+# varible return local varibles
+
+# varfun(name='hari',age=12) ==>  
+
+def varfun(**jung):
+    x=jung.pop('age')
+    y=jung.keys()
+    print("kyes:",y)
+    z=jung.values()
+    print("values:",z)
+    return jung
+yes=varfun(Name='hari',age=23)
+print(yes)
