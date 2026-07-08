@@ -12,7 +12,7 @@ print('10 '+string[5:-1])
 print('11 '+string[1:-1])
 print("12  "+string[:5])
 print("13  "+string[1:5])
-print("14  "+string[2:5])
+print("14  "+string[2:10])
 print("15  "+string[3:5])
 print("16  "+string[1:-1])
 
