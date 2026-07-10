@@ -146,3 +146,48 @@ def varfun(**jung):
     return jung
 yes=varfun(Name='hari',age=23)
 print(yes)
+
+
+#  ====================================ITERATORS ================================================
+
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    x = self.a
+    self.a += 1
+    return x
+                       #      __ITER__ and __next__ key thats used another side accesses panna mudium 
+                       # antha x irru ku la loop la (1,3+1) mari work pannu aprom self __next__ use panni call pannu pothu use aagum
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter)) 
+
+
+# ithu vye if and loop use panna 
+
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    if self.a <= 20:
+      x = self.a
+      self.a += 1
+      return x
+    else:
+      raise StopIteration
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+for x in myiter:
+  print(x)
