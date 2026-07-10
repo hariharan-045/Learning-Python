@@ -2,10 +2,10 @@ class goa:
     name = "" 
     drink = ""
     def party(self):
-        print("enjoyy the party....")
+        return "enjoyy the party...."
 
     def beach (self):
-        print("enjoy the beach....")
+        return "enjoy the beach...."
     
 ramesh = goa()
 suresh = goa()
@@ -20,5 +20,30 @@ print(suresh.name)
 print(ramesh.drink)
 print(suresh.drink)
 
+print(ramesh.party())
+print(suresh.beach())
+
+print()
+# another way
+print("**another way to print the function**")
+
+print()
+class goa:
+    name = "" 
+    drink = ""
+    def party(self):
+        print("enjoyy the party....")
+
+    def beach (self):
+        print("enjoy the beach....")
+    
+ramesh = goa()
+suresh = goa()
+
 ramesh.party()
 suresh.beach()
+
+
+
+
+
